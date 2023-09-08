@@ -1,0 +1,44 @@
+{
+  "signupUsersList": [
+    {
+      "email": "suryanshsinha30@gmail.com",
+      "password": "12345678",
+      "id": 1
+    },
+    {
+      "email": "ok@yopmail.com",
+      "password": "12345678",
+      "id": 2
+    },
+    {
+      "email": "om@yopmil.com",
+      "password": "12345678",
+      "id": 3
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 4
+    },
+    {
+      "email": "satyam@yopmail.com",
+      "password": "12345678",
+      "id": 5
+    },
+    {
+      "email": "satyaaa@yopmail.com",
+      "password": "12345678",
+      "id": 6
+    },
+    {
+      "email": "",
+      "password": "",
+      "id": 7
+    },
+    {
+      "email": "satyam@yopmail.comm",
+      "password": "12121212",
+      "id": 8
+    }
+  ]
+}
