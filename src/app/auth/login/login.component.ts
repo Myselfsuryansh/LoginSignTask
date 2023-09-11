@@ -3,6 +3,7 @@ import {FormGroup, FormBuilder, Validators} from '@angular/forms'
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { ToastrService } from 'ngx-toastr';
+import { ApiserviceService } from 'src/app/shared/apiservice.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,7 +12,7 @@ import { ToastrService } from 'ngx-toastr';
 export class LoginComponent implements OnInit {
   public loginForm!: FormGroup
   submitted:boolean=false;
-  constructor(private fb:FormBuilder,private toastr: ToastrService, private http:HttpClient, private router:Router){
+  constructor(private fb:FormBuilder,private toastr: ToastrService,private service:ApiserviceService, private http:HttpClient, private router:Router){
 
   }
 
@@ -33,6 +34,7 @@ export class LoginComponent implements OnInit {
       });
     }
   }
+  
 
   login(){
     this.submitted=true;
@@ -40,10 +42,18 @@ export class LoginComponent implements OnInit {
       return
     }
     else{
+      // this.service.login(this.loginForm.value).subscribe(result=>{
+      //   if(result){
+      //     this.toastr.success("Result")
+      //   }else{
+      //     this.toastr.warning("No Data")
+      //   }
+      // })
+
+
 
     
-    this.http.get<any>("http://localhost:3000/signupUsersList")
-    .subscribe(res=>{
+    this.http.get<any>("http://localhost:5000/profile").subscribe(res=>{
       const user = res.find((a:any)=>{
         return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password 
       });

@@ -39,6 +39,26 @@
       "email": "satyam@yopmail.comm",
       "password": "12121212",
       "id": 8
+    },
+    {
+      "email": "helloworld@yopmail.com",
+      "password": "123456789",
+      "id": 9
+    },
+    {
+      "email": "satyam12@yopmail.com",
+      "password": "123456789",
+      "id": 10
+    },
+    {
+      "email": "absh@yopmail.com",
+      "password": "1234567890",
+      "id": 11
+    },
+    {
+      "email": "ansh122@yopmail.com",
+      "password": "1212121212",
+      "id": 12
     }
   ]
 }

@@ -1,0 +1,16 @@
+<div class="col-md-12">
+    <div class="row">
+        <div class="col-md-6">
+            <form [formGroup]="form">
+                <div formArrayName="items">
+                  <div *ngFor="let item of items.controls; let i = index">
+                    <input form-control [formControlName]="i">
+                    <button class="btn btn-primary" (click)="removeItem(i)">Remove</button>
+                  </div>
+                </div>
+                <button class="btn btn-primary" (click)="addItem()">Add</button>
+              </form>
+        </div>
+    </div>
+</div>
+
