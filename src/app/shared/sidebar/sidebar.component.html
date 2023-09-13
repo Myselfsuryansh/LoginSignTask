@@ -1,0 +1,47 @@
+
+<app-sidenavbars></app-sidenavbars>
+<div class="container">
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container">
+                    <ul
+                        infiniteScroll
+                        [infiniteScrollDistance]="2"
+                        [infiniteScrollThrottle]="50"
+                        (scrolled)="onScroll()"
+    >
+
+    <table class="table table-bordered">
+        <thead>
+            
+            <tr>
+                <th>AlbumId</th>
+                <th>Id</th>
+                <th>Router</th>
+                <th>Title</th>
+                <th>Url</th>
+                <th>Thumbnail</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            
+            <tr *ngFor="let user of posts">
+                <td>{{user.albumId}}</td>
+                <td  >{{user.id}}</td>
+                <a [routerLink]="['/sidebardetails']" [queryParams]="{ id: user.id }">{{ user.id }}</a>
+                <td>{{user.title}}</td>
+                <td>{{user.url}}</td>
+                <td>{{user.thumbnailUrl}}</td>
+               
+            </tr>
+        </tbody>
+    </table>
+
+</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

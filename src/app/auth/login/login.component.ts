@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
       });
     }
   }
-  
 
   login(){
     this.submitted=true;
@@ -42,18 +41,10 @@ export class LoginComponent implements OnInit {
       return
     }
     else{
-      // this.service.login(this.loginForm.value).subscribe(result=>{
-      //   if(result){
-      //     this.toastr.success("Result")
-      //   }else{
-      //     this.toastr.warning("No Data")
-      //   }
-      // })
-
-
 
     
-    this.http.get<any>("http://localhost:5000/profile").subscribe(res=>{
+    this.http.get<any>("http://localhost:3000/signupUsersList")
+    .subscribe(res=>{
       const user = res.find((a:any)=>{
         return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password 
       });

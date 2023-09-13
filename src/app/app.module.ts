@@ -14,6 +14,15 @@ import { FormArrayComponent } from './form-array/form-array.component';
 import { ProfileComponent } from './Profile/profile/profile.component';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { ApiserviceService } from './shared/apiservice.service';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { AgGridModule } from 'ag-grid-angular';
+import { InfiniteScrollModule } from "ngx-infinite-scroll";
+import { TagsComponent } from './shared/tags/tags.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatChipsModule} from '@angular/material/chips';
+import {TagInputModule} from 'ngx-chips';
+import { SidebardetailsComponent } from './shared/sidebardetails/sidebardetails.component';
+import { SidenavbarsComponent } from './themes/sidenavbars/sidenavbars.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +31,11 @@ import { ApiserviceService } from './shared/apiservice.service';
     LoginComponent,
     HomeComponent,
     FormArrayComponent,
-    ProfileComponent
+    ProfileComponent,
+    SidebarComponent,
+    TagsComponent,
+    SidebardetailsComponent,
+    SidenavbarsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,10 +45,15 @@ import { ApiserviceService } from './shared/apiservice.service';
     HttpClientModule,
     NgxSpinnerModule,
     ToastrModule.forRoot(),
-    NgMultiSelectDropDownModule
+    NgMultiSelectDropDownModule,
+    AgGridModule,
+    InfiniteScrollModule,
+    BrowserAnimationsModule,
+    MatChipsModule,
+    TagInputModule
+    
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: ApiserviceService, multi: true }
   ],
   bootstrap: [AppComponent]
 })
