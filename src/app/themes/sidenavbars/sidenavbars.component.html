@@ -7,11 +7,11 @@
     <!-- Sidebar -->
     <nav id="sidebarMenu" >
       <div  class="position-sticky">
-        <div *ngIf="showSideNav" class="list-group ">  
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
+        <div  class="list-group ">  
+          <a *ngIf="showSideNav" class="list-group-item list-group-item-action py-2 ripple active">
             <i class="fas fa-chart-area fa-fw me-3"></i><span>Sidebar</span>
           </a>
-          <a href="#" class="list-group-item list-group-item-action py-2 ripple active">
+          <a *ngIf="showSideNav" class="list-group-item list-group-item-action py-2 ripple active">
             <i class="fas fa-chart-area fa-fw me-3"></i><span>Sidebar Details</span>
           </a>
          
